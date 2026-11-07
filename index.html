@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Mock Tests</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+     cursor: none;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(59,130,246,.14), transparent 28%),
+      radial-gradient(circle at 90% 90%, rgba(124,58,237,.12), transparent 30%),
+      #f5f7fb;
+    color: #172033;
+  }
+
+  .header {
+    padding: 42px 20px 30px;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #e8efff;
+    color: #3159c9;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 800;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: #667085;
+    font-size: 16px;
+  }
+
+  .container {
+    width: min(1100px, 92%);
+    margin: 0 auto 50px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  .mock {
+     cursor: none;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,.88);
+    border: 1px solid #e4e8f0;
+    border-radius: 20px;
+    min-height: 155px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(31,41,55,.07);
+    transition: transform .22s ease, box-shadow .22s ease,
+                border-color .22s ease, background .22s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mock::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #eef3ff;
+    top: -35px;
+    right: -30px;
+    transition: transform .3s ease;
+  }
+
+  .mock:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(31,41,55,.13);
+    border-color: #b9c9ff;
+    background: #fff;
+  }
+
+  .mock:hover::before {
+    transform: scale(1.5);
+  }
+
+  .icon {
+    position: relative;
+    z-index: 1;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #3159c9, #7048d9);
+    color: white;
+    font-size: 21px;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(67,75,190,.25);
+    margin-bottom: 13px;
+  }
+
+  .test-name {
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .start {
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    color: #7a8497;
+    font-size: 12px;
+  }
+
+
+  /* Small plain airplane pointer */
+  .plane-pointer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translate3d(-100px,-100px,-0px) rotate(-35deg);
+    transition: transform .08s linear;
+    font-size: 26px;
+    line-height: 28px;
+    filter: grayscale(1);
+  }
+
+  .plane-pointer::before {
+    content: "✈";
+  }
+
+  .magnetic-target {
+    transition: transform .18s ease;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    body { cursor: auto; }
+    .mock { cursor: pointer; }
+    .plane-pointer { display: none; }
+  }
+
+  .footer {
+    text-align: center;
+    color: #8a93a5;
+    font-size: 13px;
+    padding-bottom: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (max-width: 650px) {
+    .grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .mock { min-height: 135px; padding: 14px 8px; border-radius: 16px; }
+    .icon { width: 50px; height: 50px; border-radius: 14px; }
+  }
+
+  @media (max-width: 430px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="badge">SHREEHARI EDUCATION CONSULTANT PVT. LTD.</div>
+    <h1>Mock Test</h1>
+    <p class="subtitle">IELTS Mock Tests • Select a test to begin your practice</p>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <!-- Tests 1–30 -->
+      <a class="mock" href="M1.html"><div class="icon">01</div><div class="test-name">Mock Test 1</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M2.html"><div class="icon">02</div><div class="test-name">Mock Test 2</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M3.html"><div class="icon">03</div><div class="test-name">Mock Test 3</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M4.html"><div class="icon">04</div><div class="test-name">Mock Test 4</div><div class="start">Start Test →</div></a>
+
+      <a class="mock" href="M5.html"><div class="icon">05</div><div class="test-name">Mock Test 5</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M6.html"><div class="icon">06</div><div class="test-name">Mock Test 6</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M7.html"><div class="icon">07</div><div class="test-name">Mock Test 7</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M8.html"><div class="icon">08</div><div class="test-name">Mock Test 8</div><div class="start">Start Test →</div></a>
+
+      <a class="mock" href="M9.html"><div class="icon">09</div><div class="test-name">Mock Test 9</div><div class="start">Start Test →</div></a>
+      <a class="mock" href="M10.html"><div class="icon">10</div><div class="test-name">Mock Test 10</div><div class="start">Start Test →</div></a>
+       </main>
+
+  <div class="footer">© Shreehari Education Consultant Pvt. Ltd. • Mock Test</div>
+
+  <div class="plane-pointer" aria-hidden="true"></div>
+
+  <script>
+    const plane = document.querySelector('.plane-pointer');
+    const cards = document.querySelectorAll('.mock');
+    let mouseX = -100, mouseY = -100;
+    let lastMouseX = -100, lastMouseY = -100;
+    let planeAngle = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      const dxMouse = e.clientX - lastMouseX;
+      const dyMouse = e.clientY - lastMouseY;
+
+      if (Math.hypot(dxMouse, dyMouse) > 0.5) {
+        planeAngle = Math.atan2(dyMouse, dxMouse) * 180 / Math.PI;
+      }
+
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+
+      let nearest = null;
+      let nearestDistance = Infinity;
+
+      cards.forEach(card => {
+        const r = card.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        const d = Math.hypot(mouseX - cx, mouseY - cy);
+        if (d < nearestDistance) { nearestDistance = d; nearest = card; }
+      });
+
+      if (nearest && nearestDistance < 180) {
+        const r = nearest.getBoundingClientRect();
+        const dx = (mouseX - (r.left + r.width / 2)) * -0.055;
+        const dy = (mouseY - (r.top + r.height / 2)) * -0.055;
+        nearest.style.transform = `translate(${dx}px, ${dy}px)`;
+        nearest.classList.add('magnetic-target');
+      }
+
+      cards.forEach(card => {
+        if (card !== nearest) {
+          card.style.transform = '';
+          card.classList.remove('magnetic-target');
+        }
+      });
+
+      plane.style.transform = `translate3d(${mouseX + 4}px, ${mouseY + 3}px, 0) rotate(${planeAngle}deg)`;
+    });
+
+    document.addEventListener('mouseleave', () => {
+      plane.style.transform = 'translate3d(-100px,-100px,0) rotate(0deg)';
+      cards.forEach(card => card.style.transform = '');
+    });
+  </script>
+</body>
+</html>
